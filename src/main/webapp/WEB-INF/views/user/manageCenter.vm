@@ -449,38 +449,6 @@
 
 
         <div class="col-md-6">
-            <!-- general form elements -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">新增图片#if($resultInfo)<label style="font-size: xx-small">$resultInfo.toString()</label>#end
-                    </h3>
-                </div>
-                <!-- /.box-header -->
-                <!-- form start-->
-                <form role="form"   method="post" id="uploadForm" enctype="multipart/form-data" action="/behavior/uploadImage">
-                    <div class="box-body">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="imageDescription" placeholder="请输入图片描述:">
-                        </div>
-                        <div class="form-group">
-                            <label>单个上传: </label>
-                            <input type="file" name="oneImage"> <br/>
-                            <label>批量上传:</label>
-                            <input type="file" name="batchImage" multiple>
-                            <p class="help-block">🙂😊</p>
-                        </div>
-                    </div>
-                    <!-- /.box-body  onclick="return uploadSubmit()" -->
-                    <div class="box-footer">
-                        <button type="submit" class="btn btn-primary" id="uploadButton" >提交</button>
-                    </div>
-                </form>
-
-            </div>
-            <!-- /.box -->
-        </div>
-
-        <div class="col-md-6">
             <div class="box box-primary">
                 <div class="box-header ui-sortable-handle" style="cursor: move;">
                     <i class="ion ion-clipboard"></i>
@@ -601,6 +569,51 @@
             </div>
         </div>
 
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">新增图片#if($resultInfo)<label style="font-size: xx-small">$resultInfo.toString()</label>#end
+                    </h3>
+                </div>
+                <div class="box-body">
+                    <form role="form"   method="post" id="uploadForm" enctype="multipart/form-data" action="/behavior/uploadImage">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="imageDescription" placeholder="请输入图片描述:">
+                        </div>
+                        <div class="form-group">
+                            <label>单个上传: </label>
+                            <input type="file" name="oneImage"> <br/>
+                            <label>批量上传:</label>
+                            <input type="file" name="batchImage" multiple>
+                            <button type="submit" class="btn btn-primary" style="float: right" id="uploadButton" >提交</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.box-body  onclick="return uploadSubmit()" -->
+                <div class="box-footer">
+                    <nav aria-label="..." style="text-align:right;float:left">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#"><span aria-hidden="true">«</span></a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#">上页</a></li>
+                            <li class="page-item active"><a class="page-link">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">下页</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                        <label style="font-size: xx-small">第<span>1/13</span>页(共122条)</label>
+                    </nav>
+                    <a class="btn btn-primary btn-xs" style="float: right;color: #ffffff">隐藏</a>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+
 
         <div class="col-md-12">
         <!-- The time line -->
@@ -696,6 +709,21 @@
 
         <!-- The time line -->
         <ul class="timeline">
+            <li class="time-label">
+                  <span class="bg-green">
+                      照片墙
+                  </span>
+            </li>
+            <!-- timeline item -->
+            <li>
+                <i class="fa fa-camera bg-purple"></i>
+                <div class="timeline-item">
+                    <span class="time"><i class="fa fa-clock-o"></i>上次上传:2018-07-08</span>
+                    <h3 class="timeline-header"><a href="#">记录，属于你的时光</a></h3>
+                    <p>亲爱的Lyon,过去的365天里,你一共上传了888张照片,被888人浏览过,有888人给您的照片点赞！</p>
+                </div>
+            </li>
+            <!-- END timeline item -->
 
             #foreach($PictureQuery in $pictureQueryList.dataList)
                 #set($pageQueryBean = $PictureQuery.pictureList)

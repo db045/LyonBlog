@@ -685,7 +685,7 @@
 
             <aside class="col-md-3 blog-sidebar">
                 <div class="p-3 mb-3 bg-light rounded" style="font-family:Brush Script MT;color:#66CDAA;">
-                    <h2 class="font-italic" style="color:#9F79EE;"">About</h2>
+                    <h2 class="font-italic" style="color:#9F79EE;font-size:25px;">About</h2>
                     <p style="font-size:20px;font-family:fantasy;">《When you are old》</p>
                     <p style="font-size:18px;font-family:Brush Script MT"><em>————William Butler Yeats. </em></p>
                     <p style="font-size:15px;font-family:Vincent;font-weight:100">When you are old and grey and full of sleep,

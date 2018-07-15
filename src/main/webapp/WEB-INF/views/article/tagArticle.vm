@@ -37,7 +37,7 @@
             success:function (data) {
                 if(data!=null){
                     $("#navLoginButton").html(data.username);
-                    var logoutHtml = '<div class="dropdown-menu" id="navLogout" aria-labelledby="navbarDropdownMenuLink">'+ '<a class="dropdown-item" id="logoutButton" href="#">'+'退出登录</a> </div>';
+                    var logoutHtml = '<div class="dropdown-menu" id="navLogout" aria-labelledby="navbarDropdownMenuLink">'+ '<a class="dropdown-item" id="behaviorCenter" href="/user/manageCenter">个人中心</a><a class="dropdown-item" id="logoutButton" href="#">'+'退出登录</a> </div>';
                     var userHeadImg = '<ul class="navbar-nav mr-sm-0" id="navUserHead">'+ '<li class="nav-item" id="navLogin">'+
                             '<a class="nav-link" href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
                             +'<img src="/static/image/userHead/header.png" class="user-image" alt="User Image" style="width:25px;height:25px;border-radius:50%;"></a> </li></ul>';
@@ -476,7 +476,7 @@
         </div><!-- /.blog-main -->
         <aside class="col-md-4 blog-sidebar">
             <div class="p-3 mb-3 bg-light rounded" style="font-family:Brush Script MT;color:#66CDAA;">
-                <h2 class="font-italic" style="color:#9F79EE;"">About</h2>
+                <h2 class="font-italic" style="color:#9F79EE;font-size:25px;">About</h2>
                 <p style="font-size:20px;font-family:fantasy;">《When you are old》</p>
                 <p style="font-size:18px;font-family:Brush Script MT"><em>————William Butler Yeats. </em></p>
                 <p style="font-size:15px;font-family:Vincent;font-weight:100">When you are old and grey and full of sleep,
@@ -489,7 +489,7 @@
             </div>
 
             <div class="p-3">
-                <h2 style="color:#9F79EE;">Tags</h2>
+                <h2 style="font-size:35px;color:#9F79EE;font-weight: 300;">Tags</h2>
                 <ol class="list-unstyled mb-0">
                     #foreach($tag in $!{allTags})
                         <li><a href="/article/tag?tagId=$tag.getTagId()" target="_blank" class="btn btn-outline-secondary" style="border-color: transparent">
@@ -500,7 +500,7 @@
             </div>
 
             <div class="p-3">
-                <h2 style="color:#9F79EE;">Other</h2>
+                <h2 style="font-size:35px;color:#9F79EE;font-weight: 300;">Other</h2>
                 <ol class="list-unstyled">
                     <li style="margin:5px;"><a href="https://www.zhihu.com/people/better-man007/activities">知乎-Lyon</a></li>
                     <li style="margin:5px;"><a href="#">微信公众号-阳光流淌007</a></li>
