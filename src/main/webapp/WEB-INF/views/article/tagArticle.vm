@@ -368,7 +368,7 @@
                                 #set($tags = $article.getArticleTagList())
                                 #foreach($tag in $!{tags})
                                     <a class="anewTag" href="/article/tag?tagId=$tag.tagId" target="_blank">
-                                        <span type="button" class="btn btn-success btn-sm">$tag.tagName</span>
+                                        <span class="btn btn-success btn-sm">$tag.tagName</span>
                                     </a>
                                 #end
                             </h3>
@@ -492,7 +492,7 @@
                 <h2 style="color:#9F79EE;">Tags</h2>
                 <ol class="list-unstyled mb-0">
                     #foreach($tag in $!{allTags})
-                        <li><a href="/article/tag?tagId=$tag.getTagId()" target="_blank">
+                        <li><a href="/article/tag?tagId=$tag.getTagId()" target="_blank" class="btn btn-outline-secondary" style="border-color: transparent">
                             <span class="badge badge-dark">$tag.getTagName()</span>
                         </a></li>
                     #end

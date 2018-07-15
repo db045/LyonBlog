@@ -294,7 +294,12 @@
                             <input type="text"  name="tags"  class="form-control" id="inputnewTag"  placeholder="Tags" style="background-color:#E0EEEE;margin-left: -62px;">
                         </div>
                         <a href="javascript:void(0);"  id="addnewTag" class="btn btn-primary btn-group-lg" name="addnewTag" style="height:35px;width:60px;background-color: #1A8BE8;margin-left: -50px;">新  增</a>
-
+                        #foreach($tag in $!article.articleTagList)
+                            <a class="anewTag" title="$tag.tagName" style="margin-left: 8px">
+                                <span type="button" class="btn btn-success btn-sm" style="font-size: 13px;background-color:#555;">$tag.tagName</span>
+                                <button type="button" id="closeTag" style="display: none"  class="close" aria-label="Close"><span aria-hidden="true" style="color: #FF0000">&times;</span></button>
+                            </a>
+                        #end
                     </div>
 
                 </div>
